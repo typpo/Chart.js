@@ -3135,6 +3135,9 @@ var helpers_options = {
 			}
 			if (index !== undefined && helpers_core.isArray(value)) {
 				value = value[index];
+        if (typeof value === 'function') {
+          value = value();
+        }
 				cacheable = false;
 			}
 			if (value !== undefined) {

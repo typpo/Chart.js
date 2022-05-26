@@ -134,6 +134,9 @@ module.exports = {
 			}
 			if (index !== undefined && helpers.isArray(value)) {
 				value = value[index];
+        if (typeof value === 'function') {
+          value = value();
+        }
 				cacheable = false;
 			}
 			if (value !== undefined) {
