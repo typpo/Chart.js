@@ -25,7 +25,6 @@ defaults._set('doughnut', {
 		var list = document.createElement('ul');
 		var data = chart.data;
 		var datasets = data.datasets;
-		var globalDefaults = defaults.global;
 		var labels = data.labels;
 		var i, ilen, listItem, listItemSpan;
 
@@ -34,7 +33,7 @@ defaults._set('doughnut', {
 			for (i = 0, ilen = datasets[0].data.length; i < ilen; ++i) {
 				listItem = list.appendChild(document.createElement('li'));
 				listItemSpan = listItem.appendChild(document.createElement('span'));
-				listItemSpan.style.backgroundColor = valueOrDefault(datasets[0].backgroundColor[i], globalDefaults.defaultColor);
+				listItemSpan.style.backgroundColor = datasets[0].backgroundColor[i];
 				if (labels[i]) {
 					listItem.appendChild(document.createTextNode(labels[i]));
 				}
