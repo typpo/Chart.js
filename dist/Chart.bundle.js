@@ -1,7 +1,7 @@
 /*!
  * Chart.js v2.9.4
  * https://www.chartjs.org
- * (c) 2022 Chart.js Contributors
+ * (c) 2023 Chart.js Contributors
  * Released under the MIT License
  */
 (function (global, factory) {
@@ -2286,7 +2286,7 @@ var helpers = {
 		}
 
 		if (helpers.isObject(source)) {
-			var target = Object.create(source);
+			var target = {};
 			var keys = Object.keys(source);
 			var klen = keys.length;
 			var k = 0;
